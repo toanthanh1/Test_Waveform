@@ -36,7 +36,7 @@ int main(void)
   {
     // Vo = 1 (PD14 HIGH) for 3s
     GPIOD->ODR |= (1 << 14);
-    for (volatile uint32_t i = 0; i < 2400000; ++i); // ~3s delay (tùy tốc độ chip)
+    for (volatile uint32_t i = 0; i < 2400000; ++i); // ~3s delay 
 
     // Vo = -1 (PD14 LOW) for 2s
     GPIOD->ODR &= ~(1 << 14);
